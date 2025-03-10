@@ -1,0 +1,213 @@
+body {
+    background-color: #F4F5F7;
+}
+
+.root {
+    z-index: 1;
+}
+
+#search-box {
+    position: fixed; 
+    bottom: 5vh; 
+    left: 50%; 
+    transform: translateX(-50%); 
+
+    min-width: 250px;
+    padding: 2.5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #D8D8D8;
+
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    z-index: 1000; 
+}
+
+#search-button {
+    font-size: 16px;
+    width: 30%;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #FF6B6B;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 0 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Gill Sans", sans-serif;
+}
+
+#search-button:hover {
+    background-color: #FF5252;
+}
+
+.result-button-open:hover {
+    background-color: #27b94c;
+}
+
+.result-button-link:hover {
+    background-color: #2b80e0;
+}
+
+.result-button-open {
+    grid-column: 2;
+
+    font-size: 16px;
+    font-family: "Gill Sans", sans-serif;
+    border: none;
+    cursor: pointer;
+    padding: 2px 16px;
+    border-radius: 3px;
+
+    transition: background-color 0.3s ease;
+    background-color: #34c759;
+    color: white;
+}
+
+.result-button-link {
+    grid-column: 2;
+
+    font-size: 16px;
+    font-family: "Gill Sans", sans-serif;
+    border: none;
+    cursor: pointer;
+    padding: 2px 16px;
+    border-radius: 3px;
+
+    transition: background-color 0.3s ease;
+    background-color: #4A90E2;
+    color: white;
+}
+
+#search-line {
+    font-size: 16px;
+    width: 60%;
+    height: 40px;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #2E3A59;
+    padding: 0 12px;
+}
+
+#search-line::placeholder {
+    color: #A5A5A5;
+}
+
+#search-results {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+}
+
+.search-result {
+    min-width: 250px;
+    width: 30%;
+
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #D8D8D8;
+
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 1vh;
+    margin-top: 1.5vh;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    align-items: start; 
+}
+
+.result-title {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 400px;
+    position: relative;
+}
+
+.result-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
+.result-tags {
+    grid-column: 1;
+    grid-row: 2;
+
+    gap: 10px;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.tag-video {
+    padding: 4px;
+    border-radius: 3px;
+    background-color: #FF2D55;
+    color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 12px;
+}
+
+.tag-links {
+    padding: 4px;
+    border-radius: 3px;
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 12px;
+}
+
+.tag-images {
+    padding: 4px;
+    border-radius: 3px;
+    background-color: #FF9500;
+    color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 12px;
+}
+
+.tag-size {
+    padding: 4px;
+    border-radius: 3px;
+    background-color: #6E56CF;
+    color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 12px;
+}
+
+html {
+    scroll-behavior: smooth; /* Включаем плавную прокрутку */
+}
