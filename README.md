@@ -1,3 +1,5 @@
+# Telegraph Search
+
 A project for finding links on the Telegraph website by iterating through numbers in the URL. The project includes a web interface written in HTML/CSS/JS and a backend written in Go using the Gin and Gorilla/WebSocket libraries.
 
 ## Description
